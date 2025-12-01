@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import ExamsList from './components/ExamsList';
 import Footer from './components/Footer';
 import { Section } from './types';
 
@@ -22,6 +23,8 @@ const App: React.FC = () => {
              </p>
           </div>
         );
+      case Section.PORTFOLIO:
+        return <ExamsList />;
       case Section.CONTACT:
         return (
           <div className="max-w-3xl mx-auto py-16 px-6">
