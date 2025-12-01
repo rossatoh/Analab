@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="relative mb-4">
             <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-[6px] border-vintage-green bg-vintage-cream overflow-hidden shadow-xl flex items-center justify-center relative">
                <img 
-                  src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                  src="https://8upload.com/preview/a700199d980dd91d/Gemini_Generated_Image_iire4viire4viire.jpeg" 
                   alt="Stylized Dog" 
                   className="w-full h-full object-cover sepia-[0.6] contrast-125 hover:scale-110 transition-transform duration-700"
                />
