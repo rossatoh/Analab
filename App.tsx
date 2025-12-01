@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import AICreativeTools from './components/AICreativeTools';
 import Footer from './components/Footer';
 import { Section } from './types';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState<Section>(Section.HOME);
@@ -57,19 +55,10 @@ const App: React.FC = () => {
           </div>
         );
       default:
-        // Default View (Home) includes everything
+        // Default View (Home) includes Hero and Services
         return (
           <>
             <Services />
-            
-            {/* Divider */}
-            <div className="flex items-center justify-center py-8 opacity-40">
-               <div className="h-px w-24 bg-vintage-green"></div>
-               <span className="mx-4 text-2xl text-vintage-green">✦</span>
-               <div className="h-px w-24 bg-vintage-green"></div>
-            </div>
-
-            <AICreativeTools />
           </>
         );
     }
