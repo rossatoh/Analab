@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analab Vet - Laboratório Veterinário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              vintage: {
+                cream: '#f4ebd0',
+                paper: '#e8dec0',
+                green: {
+                  light: '#4a7c59',
+                  DEFAULT: '#2d5a27', // The main strong green
+                  dark: '#1a3c1b',
+                },
+                brown: {
+                  light: '#8c7b5b',
+                  DEFAULT: '#5d4037',
+                }
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              cursive: ['"Great Vibes"', 'cursive'],
+              mono: ['"Courier Prime"', 'monospace'],
+            },
+            backgroundImage: {
+              'paper-texture': "url('https://www.transparenttextures.com/patterns/aged-paper.png')",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f4ebd0;
+        color: #2d5a27;
+      }
+      .vintage-sunburst {
+        background: repeating-conic-gradient(
+          from 0deg,
+          #f4ebd0 0deg 10deg,
+          #eaddcf 10deg 20deg
+        );
+      }
+      .text-shadow-retro {
+        text-shadow: 2px 2px 0px #e4d5b7;
+      }
+      .text-shadow-plate {
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
