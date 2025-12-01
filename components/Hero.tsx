@@ -1,4 +1,5 @@
 import React from 'react';
+import { PawPrint, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -30,20 +31,24 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Studio Name Plate */}
-        <div className="bg-vintage-green shadow-[4px_4px_0px_#1a3c1b] px-8 py-3 transform -rotate-1 border-2 border-vintage-paper/20">
-          <h1 className="font-cursive text-4xl md:text-6xl text-vintage-cream text-shadow-plate">
-            Analab Vet – Laboratório
+        <div className="bg-vintage-green shadow-[4px_4px_0px_#1a3c1b] px-10 py-4 transform -rotate-1 border-2 border-vintage-paper/20 flex flex-col items-center">
+          <h1 className="font-serif font-bold text-4xl md:text-5xl text-vintage-cream text-shadow-plate tracking-widest leading-tight">
+            ANALABVET
           </h1>
+          <div className="w-full h-px bg-vintage-cream/30 my-1"></div>
+          <p className="font-serif text-sm md:text-lg text-vintage-cream/90 uppercase tracking-widest">
+            Laboratório de análises clínicas veterinárias
+          </p>
         </div>
 
         {/* Subtitle */}
         <h2 className="font-serif italic text-xl md:text-2xl text-vintage-brown-DEFAULT mt-4 max-w-2xl leading-relaxed">
-          &ldquo;Diagnósticos Precisos e Resultados Confiáveis para o seu Pet&rdquo;
+          Diagnósticos Precisos e Resultados Confiáveis para o seu Pet
         </h2>
 
-        {/* Highlight Section */}
-        <div className="flex items-center justify-center space-x-4 w-full mt-6">
-          <span className="text-4xl text-vintage-green opacity-60">❧</span>
+        {/* Highlight Section with Paws */}
+        <div className="flex items-center justify-center space-x-6 w-full mt-6">
+          <PawPrint className="w-8 h-8 md:w-12 md:h-12 text-vintage-green opacity-60 rotate-[-15deg]" />
           <div className="flex flex-col items-center">
             <span className="font-display font-black text-4xl md:text-6xl lg:text-7xl tracking-tight text-vintage-green text-shadow-retro uppercase leading-none">
               SAÚDE
@@ -52,13 +57,21 @@ const Hero: React.FC = () => {
               ANIMAL
             </span>
           </div>
-          <span className="text-4xl text-vintage-green opacity-60 scale-x-[-1]">❧</span>
+          <PawPrint className="w-8 h-8 md:w-12 md:h-12 text-vintage-green opacity-60 rotate-[15deg]" />
         </div>
 
-        {/* Bottom Tagline */}
-        <p className="font-mono text-sm md:text-lg text-vintage-brown-DEFAULT font-bold tracking-wider mt-4 border-t border-b border-vintage-green/30 py-2 px-6 uppercase">
-          ...incluindo hematologia, citologia e análises clínicas.
-        </p>
+        {/* Access Result Button */}
+        <div className="mt-8">
+          <a 
+            href="https://portal.workvetweb.com.br/resultados/432"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center gap-2 bg-vintage-cream text-vintage-green px-8 py-4 text-lg md:text-xl font-bold uppercase tracking-widest border-2 border-vintage-green shadow-[4px_4px_0px_#2d5a27] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200"
+          >
+            <ExternalLink size={20} />
+            ACESSE SEU RESULTADO
+          </a>
+        </div>
 
       </div>
     </header>

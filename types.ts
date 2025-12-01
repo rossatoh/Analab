@@ -3,6 +3,7 @@ import React from 'react';
 export enum Section {
   HOME = 'HOME',
   ABOUT = 'ABOUT',
+  PARTNER_SERVICES = 'PARTNER_SERVICES',
   SERVICES = 'SERVICES',
   PORTFOLIO = 'PORTFOLIO',
   TESTIMONIALS = 'TESTIMONIALS',
