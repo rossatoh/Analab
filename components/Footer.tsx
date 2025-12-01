@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <p>São Sebastião do Paraíso - MG, 37950-000</p>
             </div>
             <div>
-              <p>financeiroanalabvet@hotmail.com</p>
+              <p>analabvet@outlook.com</p>
               <p>(16) 99621-2898</p>
             </div>
             <div>
