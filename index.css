@@ -1,0 +1,22 @@
+body {
+  background-color: #f4ebd0;
+  color: #2d5a27;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.vintage-sunburst {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #f4ebd0 0deg 10deg,
+    #eaddcf 10deg 20deg
+  );
+}
+
+.text-shadow-retro {
+  text-shadow: 2px 2px 0px #e4d5b7;
+}
+
+.text-shadow-plate {
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
