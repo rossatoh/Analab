@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
         <div className="relative mb-4">
             <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-[6px] border-vintage-green bg-vintage-cream overflow-hidden shadow-xl flex items-center justify-center relative">
                <img 
-                  src="https://8upload.com/preview/a700199d980dd91d/Gemini_Generated_Image_iire4viire4viire.jpeg" 
-                  alt="Stylized Dog" 
+                  src="https://8upload.com//image/7eb2c069448b0cb3/Gemini_Generated_Image_15adh515adh515ad.png" 
+                  alt="Happy Stylized Dog" 
                   className="w-full h-full object-cover sepia-[0.6] contrast-125 hover:scale-110 transition-transform duration-700"
                />
                <div className="absolute inset-0 ring-inset ring-4 ring-black/10 rounded-full"></div>
@@ -31,12 +31,12 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Studio Name Plate */}
-        <div className="bg-vintage-green shadow-[4px_4px_0px_#1a3c1b] px-10 py-4 transform -rotate-1 border-2 border-vintage-paper/20 flex flex-col items-center">
-          <h1 className="font-serif font-bold text-4xl md:text-5xl text-vintage-cream text-shadow-plate tracking-widest leading-tight">
+        <div className="bg-vintage-cream shadow-[4px_4px_0px_#1a3c1b] px-10 py-4 transform -rotate-1 border-2 border-vintage-green flex flex-col items-center">
+          <h1 className="font-display font-bold text-4xl md:text-5xl text-vintage-green text-shadow-retro tracking-widest leading-tight">
             ANALABVET
           </h1>
-          <div className="w-full h-px bg-vintage-cream/30 my-1"></div>
-          <p className="font-serif text-sm md:text-lg text-vintage-cream/90 uppercase tracking-widest">
+          <div className="w-full h-px bg-vintage-green/30 my-1"></div>
+          <p className="font-serif text-sm md:text-lg text-vintage-green/90 uppercase tracking-widest">
             Laboratório de análises clínicas veterinárias
           </p>
         </div>

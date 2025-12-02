@@ -11,7 +11,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ currentSection, onNavigate }) => {
   return (
     <nav className="w-full bg-vintage-green-dark border-b-4 border-vintage-green-light shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-2">
+      <div className="max-w-7x4 mx-auto px-4 py-2">
         <div className="flex flex-col md:flex-row items-center justify-between">
           
           {/* Esquerda: Logo */}

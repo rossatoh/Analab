@@ -16,53 +16,43 @@ const Services: React.FC = () => {
   const services = [
     {
       title: "Hematologia",
-      icon: <Droplet className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Análise sanguínea completa."
+      icon: <Droplet className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Bioquímica",
-      icon: <FlaskConical className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Avaliação metabólica."
+      icon: <FlaskConical className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Uroanálises",
-      icon: <Microscope className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Exame físico e químico da urina."
+      icon: <Microscope className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Coprológicos",
-      icon: <Bug className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Diagnóstico de parasitas."
+      icon: <Bug className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Imunologia",
-      icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Defesa do organismo."
+      icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Sorologias",
-      icon: <Syringe className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Detecção de anticorpos."
+      icon: <Syringe className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Microbiologia",
-      icon: <Biohazard className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Culturas e antibiogramas."
+      icon: <Biohazard className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "PCR",
-      icon: <Dna className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Análise molecular avançada."
+      icon: <Dna className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Hormônios",
-      icon: <Activity className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Dosagens hormonais."
+      icon: <Activity className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     },
     {
       title: "Anatomia Patológica",
-      icon: <FileSearch className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      description: "Biópsias e diagnósticos."
+      icon: <FileSearch className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />
     }
   ];
 
