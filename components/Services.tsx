@@ -74,9 +74,7 @@ const Services: React.FC = () => {
             <h3 className="font-display font-bold text-sm md:text-base text-vintage-green uppercase tracking-wider mb-2">
               {service.title}
             </h3>
-            <p className="font-serif text-xs md:text-sm text-vintage-brown-DEFAULT leading-tight opacity-80">
-              {service.description}
-            </p>
+            
           </div>
         ))}
       </div>
