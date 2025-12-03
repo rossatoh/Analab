@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import { 
+  Droplet, 
+  FlaskConical, 
+  Microscope, 
+  Bug, 
   ShieldCheck, 
   Syringe, 
+  Biohazard, 
   Dna, 
+  Activity, 
+  FileSearch,
   X
 } from 'lucide-react';
 
 interface ServiceData {
   title: string;
-  icon?: React.ReactNode; // Ícone padrão (Lucide) - Agora opcional
+  icon: React.ReactNode; // Ícone padrão (Lucide)
   customIconSrc?: string; // Caminho para o ícone PNG personalizado (Opcional)
   details: string;
 }
@@ -21,21 +28,25 @@ const Services: React.FC = () => {
   const services: ServiceData[] = [
     {
       title: "Hematologia",
+      icon: <Droplet className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />, 
       customIconSrc: "/icons/hematologia.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Hematologia, metodologia utilizada e prazos..."
     },
     {
       title: "Bioquímica",
+      icon: <FlaskConical className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/bioquimica.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Bioquímica..."
     },
     {
       title: "Uroanálises",
+      icon: <Microscope className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/uroanalise.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Uroanálises..."
     },
     {
       title: "Coprológicos",
+      icon: <Bug className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/coprologico.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames Coprológicos..."
     },
@@ -53,6 +64,7 @@ const Services: React.FC = () => {
     },
     {
       title: "Microbiologia",
+      icon: <Biohazard className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/microbiologia.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Microbiologia..."
     },
@@ -64,11 +76,13 @@ const Services: React.FC = () => {
     },
     {
       title: "Hormônios",
+      icon: <Activity className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/hormonios.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Hormônios..."
     },
     {
       title: "Anatomia Patológica",
+      icon: <FileSearch className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
       customIconSrc: "/icons/patologia.png", // Usa PNG
       details: "Aqui você descreverá os detalhes completos sobre os exames de Anatomia Patológica..."
     }
