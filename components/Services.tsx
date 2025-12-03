@@ -1,89 +1,71 @@
 import React, { useState } from 'react';
 import { 
-  Droplet, 
-  FlaskConical, 
-  Microscope, 
-  Bug, 
   ShieldCheck, 
   Syringe, 
-  Biohazard, 
   Dna, 
   Activity, 
-  FileSearch,
   X
 } from 'lucide-react';
 
 interface ServiceData {
   title: string;
-  icon: React.ReactNode; // Ícone padrão (Lucide)
-  customIconSrc?: string; // Caminho para o ícone PNG personalizado (Opcional)
-  details: string;
+  icon?: React.ReactNode;
+  customIconSrc?: string;
+  details: string; // Texto longo do modal
 }
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
 
-  // NOTA: Para os ícones personalizados funcionarem, certifique-se de que os arquivos .png
-  // estejam dentro da pasta 'public/icons/' do seu projeto.
   const services: ServiceData[] = [
     {
       title: "Hematologia",
-      icon: <Droplet className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />, 
-      customIconSrc: "/icons/hematologia.png", // Usa PNG
+      customIconSrc: "https://8upload.com//image/59e3bfa2eeb288f3/hematologia__1_.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Hematologia, metodologia utilizada e prazos..."
     },
     {
       title: "Bioquímica",
-      icon: <FlaskConical className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/bioquimica.png", // Usa PNG
+      customIconSrc: "https://8upload.com//image/dec2ec5480ad0b65/bioquimica.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Bioquímica..."
     },
     {
       title: "Uroanálises",
-      icon: <Microscope className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/uroanalise.png", // Usa PNG
+      customIconSrc: "https://8upload.com/image/208b727e178c907a/uroanalise.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Uroanálises..."
     },
     {
       title: "Coprológicos",
-      icon: <Bug className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/coprologico.png", // Usa PNG
+      customIconSrc: "https://8upload.com/image/1dac51229521e030/cropo.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames Coprológicos..."
     },
     {
       title: "Imunologia",
       icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      // Sem customIconSrc -> Usa Lucide
       details: "Aqui você descreverá os detalhes completos sobre os exames de Imunologia..."
     },
     {
       title: "Sorologias",
       icon: <Syringe className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      // Sem customIconSrc -> Usa Lucide
       details: "Aqui você descreverá os detalhes completos sobre os exames de Sorologias..."
     },
     {
       title: "Microbiologia",
-      icon: <Biohazard className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/microbiologia.png", // Usa PNG
+      customIconSrc: "https://8upload.com/image/a4a5dc4e8861742c/microbio.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Microbiologia..."
     },
     {
       title: "PCR",
       icon: <Dna className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      // Sem customIconSrc -> Usa Lucide
       details: "Aqui você descreverá os detalhes completos sobre os exames de PCR..."
     },
     {
       title: "Hormônios",
-      icon: <Activity className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/hormonios.png", // Usa PNG
+      customIconSrc: "https://8upload.com/image/e23dad573675219b/hormonio.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Hormônios..."
     },
     {
       title: "Anatomia Patológica",
-      icon: <FileSearch className="w-8 h-8 md:w-10 md:h-10 text-vintage-cream" />,
-      customIconSrc: "/icons/patologia.png", // Usa PNG
+      customIconSrc: "https://8upload.com/image/daf33415f5e10046/anatomia_patol__gica.png",
       details: "Aqui você descreverá os detalhes completos sobre os exames de Anatomia Patológica..."
     }
   ];
@@ -115,13 +97,13 @@ const Services: React.FC = () => {
             onClick={() => handleOpenModal(service)}
             className="group relative bg-vintage-cream border border-vintage-green p-4 flex flex-col items-center text-center shadow-[4px_4px_0px_#2d5a27] hover:bg-white transition-all duration-300 cursor-pointer hover:shadow-[6px_6px_0px_#2d5a27] hover:-translate-y-1"
           >
-            <div className="mb-4 bg-vintage-green p-3 rounded-full border-2 border-vintage-cream shadow-sm group-hover:scale-110 transition-transform overflow-hidden flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
+            <div className="mb-4 bg-vintage-green p-3 rounded-full border-2 border-vintage-cream shadow-sm group-hover:scale-110 transition-transform w-16 h-16 flex items-center justify-center">
               {/* Lógica de Renderização do Ícone: Prioriza PNG se existir, senão usa Lucide */}
               {service.customIconSrc ? (
                 <img 
                   src={service.customIconSrc} 
                   alt={service.title} 
-                  className="w-full h-full object-contain p-1"
+                  className="w-10 h-10 object-contain brightness-0 invert"
                 />
               ) : (
                 service.icon
@@ -156,16 +138,15 @@ const Services: React.FC = () => {
             {/* Cabeçalho do Modal */}
             <div className="flex items-center gap-4 mb-6 border-b-2 border-vintage-green/20 pb-4">
               <div className="bg-vintage-green p-3 rounded-full text-vintage-cream w-16 h-16 flex items-center justify-center">
-                 {/* Lógica de Renderização do Ícone no Modal */}
-                 {selectedService.customIconSrc ? (
-                    <img 
+                {selectedService.customIconSrc ? (
+                   <img 
                       src={selectedService.customIconSrc} 
                       alt={selectedService.title} 
-                      className="w-full h-full object-contain p-1"
-                    />
-                  ) : (
-                    selectedService.icon
-                  )}
+                      className="w-10 h-10 object-contain brightness-0 invert"
+                   />
+                ) : (
+                   selectedService.icon
+                )}
               </div>
               <h3 className="font-display text-2xl md:text-3xl text-vintage-green uppercase tracking-widest">
                 {selectedService.title}
