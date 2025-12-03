@@ -3,7 +3,6 @@ import {
   ShieldCheck, 
   Syringe, 
   Dna, 
-  Activity, 
   X
 } from 'lucide-react';
 
