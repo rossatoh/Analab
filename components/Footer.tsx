@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
          </div>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-serif opacity-70 mb-8">
             <div>
-              <p>Pr. Com. José Honório, 5</p>
-              <p>Sebastião do Paraíso - MG, 37950-000</p>
+              <p>Rua dos Veterinários, 123</p>
+              <p>São Paulo, SP - CEP 01000-000</p>
             </div>
             <div>
-              <p>Analabvet@outlook.com</p>
+              <p>contato@analabvet.com.br</p>
               <p>(16) 99733-4746</p>
             </div>
             <div>
