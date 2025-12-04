@@ -1,17 +1,48 @@
 import React from 'react';
-import { Bike, ClipboardCheck, Lightbulb, TestTube, FileText, Pipette, Milk, Trash2, Beaker } from 'lucide-react';
+import { Bike, ClipboardCheck, Lightbulb, TestTube, Milk } from 'lucide-react';
 
 const PartnerServices: React.FC = () => {
   const materials = [
-    { name: "Tubo com gel separador e ativador de coágulo", desc: "Tampa amarela", color: "text-yellow-400" },
-    { name: "Tubo com citrato de sódio", desc: "Tampa azul", color: "text-blue-400" },
-    { name: "Tubo com fluorato de sódio", desc: "Tampa cinza", color: "text-gray-400" },
-    { name: "Lâmina e porta lâmina", desc: "Porta-lâmina com adesivo amarelo", color: "text-yellow-200" },
-    { name: "Swab simples", desc: "Haste de madeira com ponta branca", color: "text-white" },
-    { name: "Swab com meio Stuart", desc: "Tubo com tampa azul", color: "text-blue-600" },
-    { name: "Frasco estéril de urina", desc: "Tampa verde", color: "text-green-500" },
-    { name: "Frasco para fezes", desc: "Tampa vermelha", color: "text-red-500" },
-    { name: "Formol 10%", desc: "Pote azul claro com tampa marrom", color: "text-blue-300" },
+    { name: "Tubo com EDTA", desc: "Tampa roxa", color: "text-purple-600", customIcon: "" },
+    { name: "Tubo com gel separador e ativador de coágulo", desc: "Tampa amarela", color: "text-yellow-400", customIcon: "" },
+    { name: "Tubo com citrato de sódio", desc: "Tampa azul", color: "text-blue-400", customIcon: "" },
+    { name: "Tubo com fluoreto de sódio", desc: "Tampa cinza", color: "text-gray-400", customIcon: "" },
+    { 
+      name: "Lâmina e porta lâmina", 
+      desc: "Porta-lâmina com adesivo amarelo", 
+      color: "text-yellow-200",
+      customIcon: "https://8upload.com/image/f5a829e0ca542298/Lamina.png"
+    },
+    { 
+      name: "Swab simples", 
+      desc: "", 
+      color: "text-white",
+      customIcon: "https://8upload.com/image/0cb1bc04358fd219/swab_simples.png"
+    },
+    { 
+      name: "Swab com meio Stuartt", 
+      desc: "", 
+      color: "text-blue-600",
+      customIcon: "https://8upload.com/image/e904db25a977aa0a/swab_com_meio_strautt.png"
+    },
+    { 
+      name: "Frasco estéril de urina", 
+      desc: "", 
+      color: "text-green-500",
+      customIcon: "https://8upload.com/image/f7c993d27475e028/frasco_est__ril.png"
+    },
+    { 
+      name: "Frasco para fezes", 
+      desc: "", 
+      color: "text-red-500",
+      customIcon: "https://8upload.com/image/d78ac658a27e5dd1/Frasco_coletor_universal.png"
+    },
+    { 
+      name: "Formol 10%", 
+      desc: "", 
+      color: "text-blue-300",
+      customIcon: "" 
+    },
   ];
 
   return (
@@ -96,15 +127,24 @@ const PartnerServices: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                {materials.map((item, idx) => (
                  <div key={idx} className="bg-white p-6 border border-gray-200 shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                    <div className="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center mb-4 border-2 border-dashed border-gray-200">
-                       {/* Using generic icons to represent the items */}
-                       {idx < 3 && <TestTube className={`w-12 h-12 ${item.color}`} fill="currentColor" fillOpacity={0.2} />}
-                       {idx === 3 && <FileText className={`w-12 h-12 ${item.color}`} />}
-                       {idx === 4 && <Pipette className={`w-12 h-12 rotate-45 ${item.color}`} />}
-                       {idx === 5 && <Pipette className={`w-12 h-12 rotate-45 ${item.color}`} fill="currentColor" fillOpacity={0.2} />}
-                       {idx === 6 && <Beaker className={`w-12 h-12 ${item.color}`} />}
-                       {idx === 7 && <Trash2 className={`w-12 h-12 ${item.color}`} />}
-                       {idx === 8 && <Milk className={`w-12 h-12 ${item.color}`} />}
+                    <div className="w-32 h-32 bg-gray-50 rounded-full flex items-center justify-center mb-4 border-2 border-dashed border-gray-200 overflow-hidden p-2">
+                       {item.customIcon ? (
+                         <img 
+                           src={item.customIcon} 
+                           alt={item.name} 
+                           className={`
+                             hover:scale-110 transition-transform duration-300 object-contain
+                             ${item.name.toLowerCase().includes("frasco para fezes") ? 'grayscale w-3/5 h-3/5' : 'w-3/4 h-3/4'}
+                             ${item.name.toLowerCase().includes("lâmina") ? 'grayscale' : ''}
+                           `}
+                         />
+                       ) : (
+                         /* Fallback para itens sem imagem (Tubos e Formol) */
+                         <>
+                           {idx < 4 && <TestTube className={`w-12 h-12 ${item.color}`} fill="currentColor" fillOpacity={0.2} />}
+                           {idx === 9 && <Milk className={`w-12 h-12 ${item.color}`} />}
+                         </>
+                       )}
                     </div>
                     <h4 className="font-display font-bold text-lg text-[#1a3c1b] uppercase tracking-wide">{item.name}</h4>
                     <p className="font-serif text-sm text-gray-500 mt-2 italic">{item.desc}</p>
