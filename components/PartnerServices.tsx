@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Bike, ClipboardCheck, Lightbulb, TestTube } from 'lucide-react';
 
@@ -154,7 +155,8 @@ const PartnerServices: React.FC = () => {
                            alt={item.name} 
                            className={`
                              hover:scale-110 transition-transform duration-300 object-contain
-                             ${item.name.toLowerCase().includes("frasco para fezes") ? 'w-3/5 h-3/5' : 'w-3/4 h-3/4'}
+                             ${item.name.toLowerCase().includes("frasco para fezes") ? 'w-3/5 h-3/5 grayscale' : 'w-3/4 h-3/4'}
+                             ${item.name.toLowerCase().includes("lâmina") ? 'grayscale' : ''}
                            `}
                          />
                        )}

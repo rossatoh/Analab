@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -10,11 +11,11 @@ const Footer: React.FC = () => {
          </div>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-serif opacity-70 mb-8">
             <div>
-              <p>Rua dos Veterinários, 123</p>
-              <p>São Paulo, SP - CEP 01000-000</p>
+              <p>Pr. Com. José Honório, 5 - Centro</p>
+              <p>São Sebastião do Paraíso - MG, 37950-000</p>
             </div>
             <div>
-              <p>contato@analabvet.com.br</p>
+              <p>analabvet@outlook.com</p>
               <p>(16) 99733-4746</p>
             </div>
             <div>
